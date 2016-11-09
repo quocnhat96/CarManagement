@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TeduShop.Model.Models
+namespace CarManagement.Model.Models
 {
     [Table("OrderDetails")]
     public class OrderDetail
