@@ -14,6 +14,7 @@ namespace CarManagement.Model.Models
         [Key]
         [Required]
         [MaxLength(50)]
+        [Column(TypeName = "varchar")]
         public string ID { get; set; }
 
         [MaxLength(250)]
