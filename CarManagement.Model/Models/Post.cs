@@ -44,5 +44,7 @@ namespace CarManagement.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual PostCategory PostCategories { get; set; }
+
+        public virtual IEnumerable<PostTag> PostTags { get; set; }
     }
 }

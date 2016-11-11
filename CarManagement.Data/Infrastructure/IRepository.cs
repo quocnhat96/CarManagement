@@ -17,6 +17,7 @@ namespace CarManagement.Data.Infrastructure
 
         //Delete multi records
         void DeleteMulti(Expression<Func<T, bool>> where);
+        void Delete(int id);
 
         //Get an entity by int id
         T GetSingleById(int id);

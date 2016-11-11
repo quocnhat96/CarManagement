@@ -56,6 +56,11 @@ namespace CarManagement.Data.Infrastructure
             foreach (T obj in objects)
                 dbSet.Remove(obj);
         }
+        public virtual void Delete(int id)
+        {
+            var entity = dbSet.Find(id);
+            dbSet.Remove(entity);
+        }
 
         public virtual T GetSingleById(int id)
         {
