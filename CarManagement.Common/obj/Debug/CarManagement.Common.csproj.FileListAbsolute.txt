@@ -1,0 +1,5 @@
+F:\Car Management\Source Code\GIT\CarManagement.Common\bin\Debug\CarManagement.Common.dll
+F:\Car Management\Source Code\GIT\CarManagement.Common\bin\Debug\CarManagement.Common.pdb
+F:\Car Management\Source Code\GIT\CarManagement.Common\obj\Debug\CarManagement.Common.csprojResolveAssemblyReference.cache
+F:\Car Management\Source Code\GIT\CarManagement.Common\obj\Debug\CarManagement.Common.dll
+F:\Car Management\Source Code\GIT\CarManagement.Common\obj\Debug\CarManagement.Common.pdb
