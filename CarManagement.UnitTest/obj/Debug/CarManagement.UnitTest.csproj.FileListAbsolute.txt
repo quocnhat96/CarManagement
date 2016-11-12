@@ -50,3 +50,13 @@ F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\System.Web.We
 F:\Car Management\Source Code\GIT\CarManagement.UnitTest\obj\Debug\CarManagement.UnitTest.csprojResolveAssemblyReference.cache
 F:\Car Management\Source Code\GIT\CarManagement.UnitTest\obj\Debug\CarManagement.UnitTest.dll
 F:\Car Management\Source Code\GIT\CarManagement.UnitTest\obj\Debug\CarManagement.UnitTest.pdb
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\CarManagement.UnitTest.dll.config
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Microsoft.Owin.dll
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Owin.dll
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Autofac.dll
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Autofac.Integration.Mvc.dll
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Autofac.Integration.WebApi.dll
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Microsoft.Owin.xml
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Autofac.xml
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Autofac.Integration.Mvc.xml
+F:\Car Management\Source Code\GIT\CarManagement.UnitTest\bin\Debug\Autofac.Integration.WebApi.xml
