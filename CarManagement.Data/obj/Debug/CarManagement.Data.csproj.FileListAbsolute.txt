@@ -16,3 +16,9 @@ F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Dat
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.csproj.GenerateResource.Cache
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.AddErrorTable.resources
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.aa.resources
+F:\Car Management\Source Code\GIT\CarManagement.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Car Management\Source Code\GIT\CarManagement.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Car Management\Source Code\GIT\CarManagement.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Car Management\Source Code\GIT\CarManagement.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.IntergrateAspnetIdentity.resources
+F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.ChangeKey.resources

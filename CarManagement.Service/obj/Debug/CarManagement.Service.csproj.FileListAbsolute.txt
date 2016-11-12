@@ -11,3 +11,7 @@ F:\Car Management\Source Code\GIT\CarManagement.Service\bin\Debug\EntityFramewor
 F:\Car Management\Source Code\GIT\CarManagement.Service\obj\Debug\CarManagement.Service.csprojResolveAssemblyReference.cache
 F:\Car Management\Source Code\GIT\CarManagement.Service\obj\Debug\CarManagement.Service.dll
 F:\Car Management\Source Code\GIT\CarManagement.Service\obj\Debug\CarManagement.Service.pdb
+F:\Car Management\Source Code\GIT\CarManagement.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Car Management\Source Code\GIT\CarManagement.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Car Management\Source Code\GIT\CarManagement.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Car Management\Source Code\GIT\CarManagement.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml

@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using CarManagement.Model.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
+
 namespace CarManagement.Data
 {
-    public class CarManagementDbContext :  DbContext
+    public class CarManagementDbContext :  IdentityDbContext<ApplicationUser>
     {
         public CarManagementDbContext() : base("CarManagementConnection")
         {
@@ -34,9 +36,15 @@ namespace CarManagement.Data
 
         public DbSet<Error> Errors { get; set; }
 
+        public static CarManagementDbContext Create()
+        {
+            return new CarManagementDbContext();
+        }
+
         protected override void OnModelCreating (DbModelBuilder builder)
         {
-
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
         }
     }
 }

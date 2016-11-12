@@ -82,3 +82,15 @@ F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Host.Syst
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\AutoMapper.dll
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\AutoMapper.xml
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.dll
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.xml
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.OAuth.xml

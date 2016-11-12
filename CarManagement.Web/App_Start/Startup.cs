@@ -13,17 +13,22 @@ using System.Web.Http;
 using Autofac.Integration.WebApi;
 using CarManagement.Data.Repository;
 using CarManagement.Service;
+using Microsoft.AspNet.Identity;
+using static CarManagement.Web.App_Start.IdentityConfig;
+using System.Web;
+using Microsoft.Owin.Security;
 
 [assembly: OwinStartup(typeof(CarManagement.Web.App_Start.Startup))]
 
 namespace CarManagement.Web.App_Start
 {
-    public class Startup
+    public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
             // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=316888
             ConfigAutofac(app);
+            ConfigureAuth(app);
         }
         public void ConfigAutofac (IAppBuilder app)
         {
@@ -36,6 +41,13 @@ namespace CarManagement.Web.App_Start
             builder.RegisterType<DbFactory>().As<IDbFactory>().InstancePerRequest();
 
             builder.RegisterType<CarManagementDbContext>().AsSelf().InstancePerRequest();
+
+            //ASP.NET Identity
+            builder.RegisterType<ApplicationUserStore>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
+            builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
+            builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();
+            builder.Register(c => HttpContext.Current.GetOwinContext().Authentication).InstancePerRequest();
+            builder.Register(c => HttpContext.Current.GetOwinContext().Authentication).InstancePerRequest();
 
             //Repository
             builder.RegisterAssemblyTypes(typeof(PostCategoryRepository).Assembly)
