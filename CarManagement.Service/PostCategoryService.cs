@@ -11,22 +11,25 @@ namespace CarManagement.Service
 {
     public interface IPostCategoryService
     {
-        void Add(PostCategory postCategory);
+        PostCategory Add(PostCategory postCategory);
 
         void Update(PostCategory postCategory);
 
-        void Deleted(int id);
+        PostCategory Delete(int id);
 
         IEnumerable<PostCategory> GetAll();
 
-        IEnumerable<PostCategory> GetAllByParentID(int parentId);
+        IEnumerable<PostCategory> GetAllByParentId(int parentId);
 
         PostCategory GetById(int id);
+
+        void Save();
     }
+
     public class PostCategoryService : IPostCategoryService
     {
-        IPostCategoryRepository _postCategoryRepository;
-        IUnitOfWork _unitOfWork;
+        private IPostCategoryRepository _postCategoryRepository;
+        private IUnitOfWork _unitOfWork;
 
         public PostCategoryService(IPostCategoryRepository postCategoryRepository, IUnitOfWork unitOfWork)
         {
@@ -34,14 +37,14 @@ namespace CarManagement.Service
             this._unitOfWork = unitOfWork;
         }
 
-        public void Add(PostCategory postCategory)
+        public PostCategory Add(PostCategory postCategory)
         {
-            _postCategoryRepository.Add(postCategory);
+            return _postCategoryRepository.Add(postCategory);
         }
 
-        public void Deleted(int id)
+        public PostCategory Delete(int id)
         {
-            _postCategoryRepository.Delete(id);
+            return _postCategoryRepository.Delete(id);
         }
 
         public IEnumerable<PostCategory> GetAll()
@@ -49,7 +52,7 @@ namespace CarManagement.Service
             return _postCategoryRepository.GetAll();
         }
 
-        public IEnumerable<PostCategory> GetAllByParentID(int parentId)
+        public IEnumerable<PostCategory> GetAllByParentId(int parentId)
         {
             return _postCategoryRepository.GetMulti(x => x.Status && x.ParentID == parentId);
         }
@@ -57,6 +60,11 @@ namespace CarManagement.Service
         public PostCategory GetById(int id)
         {
             return _postCategoryRepository.GetSingleById(id);
+        }
+
+        public void Save()
+        {
+            _unitOfWork.Commit();
         }
 
         public void Update(PostCategory postCategory)

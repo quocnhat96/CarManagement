@@ -1,8 +1,6 @@
 ﻿using CarManagement.Data.Infrastructure;
 using CarManagement.Model.Models;
-using System.Collections;
 using System.Collections.Generic;
-using System;
 using System.Linq;
 
 namespace CarManagement.Data.Repository
@@ -21,12 +19,14 @@ namespace CarManagement.Data.Repository
         public IEnumerable<Post> GetAllByTag(string tag, int pageIndex, int pageSize, out int totalRow)
         {
             var query = from p in DbContext.Posts
-                        join pot in DbContext.PostTags
-                        on p.ID equals pot.PostID
-                        where pot.TagID == tag && p.Status
-                        orderby p.CreatedBy descending
+                        join pt in DbContext.PostTags
+                        on p.ID equals pt.PostID
+                        where pt.TagID == tag && p.Status
+                        orderby p.CreatedDate descending
                         select p;
+
             totalRow = query.Count();
+
             query = query.Skip((pageIndex - 1) * pageSize).Take(pageSize);
 
             return query;

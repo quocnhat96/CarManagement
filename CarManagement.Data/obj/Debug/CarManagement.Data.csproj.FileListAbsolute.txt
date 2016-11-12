@@ -14,3 +14,4 @@ F:\Car Management\Source Code\GIT\CarManagement.Data\bin\Debug\CarManagement.Mod
 F:\Car Management\Source Code\GIT\CarManagement.Data\bin\Debug\CarManagement.Model.pdb
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.InitialDB.resources
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.csproj.GenerateResource.Cache
+F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.AddErrorTable.resources

@@ -5,14 +5,14 @@ using System.Linq;
 
 namespace CarManagement.Data.Repository
 {
-    public interface IProductCategoryRepository :IRepository<ProductCategory>
+    public interface IProductCategoryRepository : IRepository<ProductCategory>
     {
         IEnumerable<ProductCategory> GetByAlias(string alias);
     }
 
     public class ProductCategoryRepository : RepositoryBase<ProductCategory>, IProductCategoryRepository
     {
-        public ProductCategoryRepository(DbFactory dbFactory)
+        public ProductCategoryRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }
