@@ -31,6 +31,10 @@ namespace CarManagement.Model.Models
 
         public decimal Price { get; set; }
 
+        public decimal OriginalPrice { set; get; }
+
+        public int Quantity { get; set; }
+
         public decimal? PromotionPrice { get; set; }
 
         public int? Warranty { get; set; }
