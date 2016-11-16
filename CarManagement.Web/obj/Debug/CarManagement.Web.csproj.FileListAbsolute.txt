@@ -1,3 +1,4 @@
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\ApplicationInsights.config
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\roslyn\csc.exe
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
