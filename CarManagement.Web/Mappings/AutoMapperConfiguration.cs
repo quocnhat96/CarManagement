@@ -1,11 +1,6 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using CarManagement.Model.Models;
 using CarManagement.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace CarManagement.Web.Mappings
 {
