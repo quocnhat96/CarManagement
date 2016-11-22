@@ -256,6 +256,7 @@
     <Content Include="App\Components\product_categories\productCategory.module.js" />
     <Content Include="App\Components\product_categories\productCategoryListController.js" />
     <Content Include="App\Components\product_categories\productCategoryListView.html" />
+    <Content Include="App\Shared\filters\statusFilter.js" />
     <Content Include="App\Shared\modules\carmanager.common.js" />
     <Content Include="App\Shared\services\apiService.js" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
