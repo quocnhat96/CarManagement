@@ -216,6 +216,7 @@
   <ItemGroup>
     <Compile Include="API\AccountController.cs" />
     <Compile Include="API\PostCategoryController.cs" />
+    <Compile Include="API\ProductCategoryController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -235,6 +236,9 @@
     <Compile Include="Models\PostCategoryViewModel.cs" />
     <Compile Include="Models\PostTagViewModel.cs" />
     <Compile Include="Models\PostViewModel.cs" />
+    <Compile Include="Models\ProductCategoryViewModel.cs" />
+    <Compile Include="Models\ProductTagViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\TagViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -249,7 +253,11 @@
     <Content Include="App\Components\products\productListController.js" />
     <Content Include="App\Components\products\productListView.html" />
     <Content Include="App\Components\products\products.module.js" />
+    <Content Include="App\Components\product_categories\productCategory.module.js" />
+    <Content Include="App\Components\product_categories\productCategoryListController.js" />
+    <Content Include="App\Components\product_categories\productCategoryListView.html" />
     <Content Include="App\Shared\modules\carmanager.common.js" />
+    <Content Include="App\Shared\services\apiService.js" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
     <Content Include="Assets\admin\css\AdminLTE.min.css" />
     <Content Include="Assets\admin\css\skins\skin-black-light.css" />
@@ -625,12 +633,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\Components\orders\" />
-    <Folder Include="App\Components\product_categories\" />
     <Folder Include="App\Components\roles\" />
     <Folder Include="App\Components\users\" />
     <Folder Include="App\Shared\footer\" />
     <Folder Include="App\Shared\navigation\" />
-    <Folder Include="App\Shared\services\" />
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
