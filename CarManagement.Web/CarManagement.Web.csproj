@@ -231,6 +231,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Core\ApiControllerBase.cs" />
+    <Compile Include="Infrastructure\Core\PaginationSet.cs" />
     <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Models\PostCategoryViewModel.cs" />
@@ -256,9 +257,12 @@
     <Content Include="App\Components\product_categories\productCategory.module.js" />
     <Content Include="App\Components\product_categories\productCategoryListController.js" />
     <Content Include="App\Components\product_categories\productCategoryListView.html" />
+    <Content Include="App\Shared\directives\pagerDirective.html" />
+    <Content Include="App\Shared\directives\pagerDirective.js" />
     <Content Include="App\Shared\filters\statusFilter.js" />
     <Content Include="App\Shared\modules\carmanager.common.js" />
     <Content Include="App\Shared\services\apiService.js" />
+    <Content Include="App\Shared\services\notificationService.js" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
     <Content Include="Assets\admin\css\AdminLTE.min.css" />
     <Content Include="Assets\admin\css\skins\skin-black-light.css" />
@@ -617,6 +621,10 @@
     <Content Include="Assets\admin\libs\slimScroll\examples\style.css" />
     <Content Include="Assets\admin\libs\slimScroll\jquery.slimscroll.js" />
     <Content Include="Assets\admin\libs\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="Assets\admin\libs\toastr\toastr.css" />
+    <Content Include="Assets\admin\libs\toastr\toastr.js" />
+    <Content Include="Assets\admin\libs\toastr\toastr.min.css" />
+    <Content Include="Assets\admin\libs\toastr\toastr.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -856,6 +864,15 @@
     <Content Include="Assets\admin\libs\slimScroll\package.json" />
     <Content Include="Assets\admin\libs\slimScroll\README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\admin\libs\toastr\.bower.json" />
+    <Content Include="Assets\admin\libs\toastr\bower.json" />
+    <Content Include="Assets\admin\libs\toastr\LICENSE" />
+    <Content Include="Assets\admin\libs\toastr\README.md" />
+    <Content Include="Assets\admin\libs\toastr\toastr.js.map" />
+    <Content Include="Assets\admin\libs\toastr\toastr.less" />
+    <Content Include="Assets\admin\libs\toastr\toastr.scss" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -870,11 +887,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49952</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49952/</IISUrl>
+          <IISUrl>http://localhost:51003/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
