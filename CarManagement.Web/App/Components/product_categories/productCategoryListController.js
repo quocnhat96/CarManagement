@@ -15,6 +15,7 @@
         function search() {
             getProductCategories();
         }
+        
         function getProductCategories(page) {
             page = page || 0;
 
@@ -29,9 +30,6 @@
             apiService.get('/api/productcategory/getall', config, function (result) {
                 if (result.data.TotalCount == 0) {
                     notificationService.displayWarning('No record');
-                }
-                else {
-                    notificationService.displaySuccess('You have ' + result.data.TotalCount + ' record(s)');
                 }
                 $scope.productCategories = result.data.Items;
                 $scope.page = result.data.Page;

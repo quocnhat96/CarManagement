@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -9,6 +10,7 @@ namespace CarManagement.Web.Models
     {
         public int ID { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
         public string Alias { get; set; }
@@ -33,6 +35,7 @@ namespace CarManagement.Web.Models
 
         public string MetaDescription { get; set; }
 
+        [Required]
         public bool Status { get; set; }
 
         public bool? HomeFlag { get; set; }

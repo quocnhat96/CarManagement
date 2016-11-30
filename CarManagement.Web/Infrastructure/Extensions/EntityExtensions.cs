@@ -49,5 +49,46 @@ namespace CarManagement.Web.Infrastructure.Extensions
             post.MetaKeyword = postVm.MetaKeyword;
             post.Status = postVm.Status;
         }
+
+        public static void UpdateProdcutCategory(this ProductCategory productCategory, ProductCategoryViewModel productCategoryVm)
+        {
+            productCategory.ID = productCategoryVm.ID;
+            productCategory.Name = productCategoryVm.Name;
+            productCategory.Alias = productCategoryVm.Alias;
+            productCategory.ParentID = productCategoryVm.ParentID;
+            productCategory.Description = productCategoryVm.Description;
+            productCategory.Image = productCategoryVm.Image;
+            productCategory.HomeFlag = productCategoryVm.HomeFlag;
+            productCategory.DisplayOrder = productCategoryVm.DisplayOrder;
+
+            productCategory.CreatedDate = productCategoryVm.CreatedDate;
+            productCategory.CreatedBy = productCategoryVm.CreatedBy;
+            productCategory.UpdatedDate = productCategoryVm.UpdatedDate;
+            productCategory.UpdatedBy = productCategoryVm.UpdatedBy;
+            productCategory.MetaDescription = productCategoryVm.MetaDescription;
+            productCategory.MetaKeyword = productCategoryVm.MetaKeyword;
+            productCategory.Status = productCategoryVm.Status;
+        }
+
+        public static void UpdateProduct(this Product product, ProductViewModel productVm)
+        {
+            product.ID = productVm.ID;
+            product.Name = productVm.Name;
+            product.Alias = productVm.Alias;
+            product.CategoryID = productVm.CategoryID;
+            product.Description = productVm.Description;
+            product.Content = productVm.Content;
+            product.Image = productVm.Image;
+            product.HomeFlag = productVm.HomeFlag;
+            product.ViewCount = productVm.ViewCount;
+
+            product.CreatedDate = productVm.CreatedDate;
+            product.CreatedBy = productVm.CreatedBy;
+            product.UpdatedDate = productVm.UpdatedDate;
+            product.UpdatedBy = productVm.UpdatedBy;
+            product.MetaDescription = productVm.MetaDescription;
+            product.MetaKeyword = productVm.MetaKeyword;
+            product.Status = productVm.Status;
+        }
     }
 }

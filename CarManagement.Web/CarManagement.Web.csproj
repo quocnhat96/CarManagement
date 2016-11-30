@@ -255,6 +255,10 @@
     <Content Include="App\Components\products\productListView.html" />
     <Content Include="App\Components\products\products.module.js" />
     <Content Include="App\Components\product_categories\productCategory.module.js" />
+    <Content Include="App\Components\product_categories\productCategoryAddController.js" />
+    <Content Include="App\Components\product_categories\productCategoryAddView.html" />
+    <Content Include="App\Components\product_categories\productCategoryEditController.js" />
+    <Content Include="App\Components\product_categories\productCategoryEditView.html" />
     <Content Include="App\Components\product_categories\productCategoryListController.js" />
     <Content Include="App\Components\product_categories\productCategoryListView.html" />
     <Content Include="App\Shared\directives\pagerDirective.html" />
@@ -262,6 +266,7 @@
     <Content Include="App\Shared\filters\statusFilter.js" />
     <Content Include="App\Shared\modules\carmanager.common.js" />
     <Content Include="App\Shared\services\apiService.js" />
+    <Content Include="App\Shared\services\commonService.js" />
     <Content Include="App\Shared\services\notificationService.js" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
     <Content Include="Assets\admin\css\AdminLTE.min.css" />
