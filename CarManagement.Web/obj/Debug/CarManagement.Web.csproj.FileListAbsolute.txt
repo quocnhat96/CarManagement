@@ -94,3 +94,4 @@ F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.AspNet.Identit
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.xml
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.Cookies.xml
 F:\Car Management\Source Code\GIT\CarManagement.Web\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Car Management\Source Code\GIT\CarManagement.Web\bin\CKFinder.dll

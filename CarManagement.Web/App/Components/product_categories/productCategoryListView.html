@@ -34,8 +34,9 @@
                         </span>
                     </div><!--Input Group-->
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" >
                     <button class="btn btn-success" ui-sref="add_product_categories">Add new</button>
+                    <button class="btn btn-danger" ng-click="deleteMultiple()" id="btnDelete" disabled>Delte Multi</button>
                 </div>
 
             </div>
@@ -45,19 +46,30 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" ng-controller="productCategoryListController">
                     <table class="table table-bordered">
                         <tr>
-                            <th style="width: 5%">No.</th>
-                            <th style="width: 55%">Product Category Name</th>
-                            <th style="width: 20%">Created Date</th>
-                            <th style="width: 10%">Status</th>
+                            <th><input name="all" type="checkbox" ng-click="selectAll()"/></th>
+                            <th style="width: 7%" ng-click="Sort('productCategories.ID')">No.
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='productCategories.ID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th style="width: 50%" ng-click="Sort('productCategories.Name')">Product Category Name
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='productCategories.Name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th style="width: 23%" ng-click="Sort('productCategories.CreatedDate')">Created Date
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='productCategories.CreatedDate'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th style="width: 10%" ng-click="Sort('productCategories.Status')">Status
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='productCategories.Status'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
                             <th style="width: 10%">Action</th>
                         </tr>
-                        <tr ng-repeat="item in productCategories| orderBy:'ID'">
+
+                        <tr ng-repeat="item in productCategories| orderBy:sortKey:reverse"  ng-show="productCategories.length!=0">
+                            <td><input type="checkbox" ng-model="item.checked" name="all"/></td>
                             <td>{{item.ID}}</td>
                             <td>{{item.Name}}</td>
-                            <td>{{item.CreatedDate  | date:'dd/MM/yyyy hh:mm' }}</td>
+                            <td>{{item.CreatedDate  | date:'dd/MM/yyyy HH:mm ' }}</td>
                             <td>
                                 <span ng-class="{'badge bg-red' :item.Status==false,'badge bg-green' :item.Status==true }">
                                     {{item.Status | statusFilter}}
@@ -65,8 +77,12 @@
                             </td>
                             <td>
                                 <button class="btn btn-sm btn-primary" ui-sref="edit_product_categories({id:item.ID})"><i class="fa fa-pencil"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                <button class="btn btn-sm btn-danger" ng-click="deleteProductCategory(item.ID)"><i class="fa fa-trash"></i></button>
                             </td>
+                        </tr>
+
+                        <tr>
+                            <td ng-show="productCategories.length==0" align="center" colspan="6" style="font-size:25px"><strong><i>No Data available...</i></strong></td>
                         </tr>
                     </table>
                 </div>

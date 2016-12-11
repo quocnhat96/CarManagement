@@ -39,6 +39,8 @@ namespace CarManagement.Web.Models
 
         public int? ViewCount { get; set; }
 
+        public string Tags { set; get; }
+
         public DateTime? CreatedDate { get; set; }
 
         public string CreatedBy { get; set; }

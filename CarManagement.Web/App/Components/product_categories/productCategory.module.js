@@ -6,20 +6,24 @@
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function config($stateProvider, $urlRouterProvider) {
-        $stateProvider.state('product_categories', {
-            url: "/product_categories",
-            templateUrl: "/App/Components/product_categories/productCategoryListView.html",
-            controller: "productCategoryListController"
-        })
+        $stateProvider
+            .state('product_categories', {
+                url: "/product_categories",
+                parent: 'base',
+                templateUrl: "/App/Components/product_categories/productCategoryListView.html",
+                controller: "productCategoryListController"
+            })
             .state('add_product_categories', {
-            url: "/add_product_categories",
-            templateUrl: "/App/Components/product_categories/productCategoryAddView.html",
-            controller: "productCategoryAddController"
-        })
+                url: "/add_product_categories",
+                parent: 'base',
+                templateUrl: "/App/Components/product_categories/productCategoryAddView.html",
+                controller: "productCategoryAddController"
+            })
             .state('edit_product_categories', {
-            url: "/edit_product_categories/:id",
-            templateUrl: "/App/Components/product_categories/productCategoryEditView.html",
-            controller: "productCategoryEditController"
-        })
+                url: "/edit_product_categories/:id",
+                parent: 'base',
+                templateUrl: "/App/Components/product_categories/productCategoryEditView.html",
+                controller: "productCategoryEditController"
+            })
     }
 })();

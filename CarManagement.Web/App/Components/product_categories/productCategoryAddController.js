@@ -1,9 +1,9 @@
 ﻿(function (app) {
     app.controller('productCategoryAddController', productCategoryAddController);
 
-    productCategoryAddController.$inject = ['apiService', '$scope','notificationService','$state'];
+    productCategoryAddController.$inject = ['apiService', '$scope', 'notificationService', '$state', 'commonService'];
 
-    function productCategoryAddController(apiService, $scope, notificationService, $state) {
+    function productCategoryAddController(apiService, $scope, notificationService, $state, commonService) {
         $scope.productCategory = {
             CreatedDate: new Date(),
             Status: true
@@ -20,7 +20,7 @@
         function addProductCategories() {
             apiService.post('api/productcategory/create', $scope.productCategory,
                function (result) {
-                   notificationService.displaySuccess(result.data.Name + 'has been added');
+                   notificationService.displaySuccess(result.data.Name + ' has been added');
                    $state.go('product_categories')
                }, function (error) {
                    notificationService.displayError('Add New Product Category Unsuccessfully ')

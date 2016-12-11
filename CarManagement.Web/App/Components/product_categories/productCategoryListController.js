@@ -1,9 +1,9 @@
 ﻿(function (app) {
     app.controller('productCategoryListController', productCategoryListController);
 
-    productCategoryListController.$inject = ['$scope', 'apiService', 'notificationService'];
+    productCategoryListController.$inject = ['$scope', 'apiService', 'notificationService', '$ngBootbox', '$filter' ];
 
-    function productCategoryListController($scope, apiService, notificationService) {
+    function productCategoryListController($scope, apiService, notificationService, $ngBootbox, $filter) {
         $scope.productCategories = [];
         $scope.page = 0;
         $scope.pagesCount = 0;
@@ -12,10 +12,87 @@
 
         $scope.search = search;
 
+        $scope.deleteProductCategory = deleteProductCategory;
+
+        $scope.Sort = Sort;
+
+        function Sort(keyname) {
+            $scope.sortKey = keyname;   //set the sortKey to the param passed
+            $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+        }
+
+        $scope.$watch('productCategories', function (n, o) {
+            var checked = $filter('filter')(n, { checked: true });
+            if (checked.length) {
+                $scope.selected = checked;
+                $('#btnDelete').removeAttr('disabled');
+            }
+            else {
+                $('#btnDelete').attr('disabled', 'disabled');
+            }
+        }, true);
+
+        $scope.selectAll = selectAll;
+        $scope.isAll = false;
+        $scope.deleteMultiple = deleteMultiple;
+
+
+        function selectAll() {
+            if ($scope.isAll === false) {
+                angular.forEach($scope.productCategories, function (item) {
+                    item.checked = true;
+                });
+                $scope.isAll = true;
+            }
+            else {
+                angular.forEach($scope.productCategories, function (item) {
+                    item.checked = false;
+                });
+                $scope.isAll = false;
+            }
+        }
+
+        function deleteProductCategory(id) {
+            $ngBootbox.confirm('Do you want to delete?').then(function () {
+                var config = {
+                    params: {
+                        id: id
+                    }
+                }
+                apiService.del('api/productcategory/delete', config, function () {
+                    notificationService.displaySuccess('Delete successfully!');
+                    search();
+                }, function () {
+                    notificationService.displayError('Delete unsuccessfully!');
+                })
+            });
+        };
+
+        function deleteMultiple() {
+            var listId = [];
+            $.each($scope.selected, function (i, item) {
+                listId.push(item.ID);
+            });
+            $ngBootbox.confirm('Do you want to delete this item selected?').then(function () {
+                var config = {
+                    params: {
+                        checkedProductCategories: JSON.stringify(listId)
+                    }
+                }
+                apiService.del('api/productcategory/deletemulti', config, function (result) {
+                    notificationService.displaySuccess('Deleted Successfully ' + result.data + ' records');
+                    search();
+                }, function (error) {
+                    notificationService.displayError('Delete unsuccessfully!');
+                });
+            });
+        }
+
+
         function search() {
             getProductCategories();
         }
-        
+
         function getProductCategories(page) {
             page = page || 0;
 

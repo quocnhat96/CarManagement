@@ -74,21 +74,31 @@ namespace CarManagement.Web.Infrastructure.Extensions
         {
             product.ID = productVm.ID;
             product.Name = productVm.Name;
+            product.Description = productVm.Description;
             product.Alias = productVm.Alias;
             product.CategoryID = productVm.CategoryID;
-            product.Description = productVm.Description;
             product.Content = productVm.Content;
             product.Image = productVm.Image;
+            product.MoreImages = productVm.MoreImages;
+            product.Price = productVm.Price;
+            product.PromotionPrice = productVm.PromotionPrice;
+            product.Warranty = productVm.Warranty;
             product.HomeFlag = productVm.HomeFlag;
+            product.HotFlag = productVm.HotFlag;
             product.ViewCount = productVm.ViewCount;
 
             product.CreatedDate = productVm.CreatedDate;
             product.CreatedBy = productVm.CreatedBy;
             product.UpdatedDate = productVm.UpdatedDate;
             product.UpdatedBy = productVm.UpdatedBy;
-            product.MetaDescription = productVm.MetaDescription;
             product.MetaKeyword = productVm.MetaKeyword;
+            product.MetaDescription = productVm.MetaDescription;
             product.Status = productVm.Status;
+            product.Tags = productVm.Tags;
+            product.Quantity = productVm.Quantity;
+            product.OriginalPrice = productVm.OriginalPrice;
         }
+
+
     }
 }

@@ -43,6 +43,8 @@ namespace CarManagement.Model.Models
 
         public string Content { get; set; }
 
+        public string Tags { set; get; }
+
         public bool? HomeFlag { get; set; }
 
         public bool? HotFlag { get; set; }

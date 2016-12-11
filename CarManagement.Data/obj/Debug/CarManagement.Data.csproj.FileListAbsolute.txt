@@ -24,3 +24,4 @@ F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Dat
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.ChangeKey.resources
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.ChangeatributePageTable.resources
 F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.ChangeProductTable.resources
+F:\Car Management\Source Code\GIT\CarManagement.Data\obj\Debug\CarManagement.Data.Migrations.changeproduct.resources
